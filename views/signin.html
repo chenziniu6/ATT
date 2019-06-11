@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>登陆界面</title>
+<style type='text/css'>
+	body{
+		background: skyblue;
+	}
+</style>
+</head>
+
+<body>
+<form enctype="multipart/form-data" method="post">
+	<table width="600" border="1" align="center">
+		<th colspan="2">
+			用户登陆
+		</th>
+		<tbody>
+			<tr>
+				<td>用户名</td>
+				<td align="center"><input type="text" name="username" id="username"></td>
+			</tr>
+			<tr>
+				<td>密码</td>
+				<td align="center"><input type="password" name="password" id="password"></td>
+			</tr>
+			<tr>
+				<td></td>
+     			<td align="center"><input type="submit" id="signin" value="登陆" ></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center">没有账号<a href="./signup">点击注册</a>
+			</tr>
+		</tbody>
+	</table>
+    </form>
+    <script>
+        $('#signin').on('click',()=>{
+             $.post('/signin',{
+                 username:$('#username').val(),
+                 password:$('#password').val(),
+             },function(res){
+                 if(res.err==0){
+                     alert("登录成功");
+                     window.location.href="http://localhost:3000/card";
+                 }else{
+                     alert(res.msg);
+                 }
+             });
+         });
+   </script>
+</body>
+</html>

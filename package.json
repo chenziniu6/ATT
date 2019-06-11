@@ -1,0 +1,29 @@
+{
+  "name": "att",
+  "version": "1.0.0",
+  "description": "game",
+  "main": "app.js",
+  "scripts": {
+    "test": "run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shoubai/GAME.git"
+  },
+  "keywords": [
+    "nodejs"
+  ],
+  "author": "shoubai",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shoubai/GAME/issues"
+  },
+  "homepage": "https://github.com/shoubai/GAME#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
+    "express": "^4.16.4",
+    "express-session": "^1.16.1",
+    "mysql": "^2.17.1"
+  }
+}
